@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!-- SQL XML created by WWW SQL Designer, https://github.com/ondras/wwwsqldesigner/ -->
-<!-- Active URL: http://127.0.0.1:8080/wwwsqldesigner/ -->
+<!-- Active URL: http://127.0.0.1:8080/ -->
 <sql>
 <datatypes db="mysql">
 	<group label="Numeric" color="rgb(238,238,170)">
@@ -37,7 +37,7 @@
 		<type label="SET" length="1" sql="SET" quote=""/>
 		<type label="Bit" length="0" sql="bit" quote=""/>
 	</group>
-</datatypes><table x="629" y="384" name="users">
+</datatypes><table x="630" y="503" name="users">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -59,8 +59,8 @@
 <row name="social name" null="1" autoincrement="0">
 <datatype>VARCHAR(100)</datatype>
 <default>NULL</default></row>
-<row name="cellphone number" null="1" autoincrement="0">
-<datatype>VARCHAR(12)</datatype>
+<row name="cellphone_number" null="1" autoincrement="0">
+<datatype>VARCHAR(20)</datatype>
 <default>NULL</default></row>
 <row name="country" null="1" autoincrement="0">
 <datatype>VARCHAR(50)</datatype>
@@ -92,11 +92,14 @@
 <row name="adm" null="1" autoincrement="0">
 <datatype>VARCHAR(10)</datatype>
 <default>NULL</default></row>
+<row name="choice" null="1" autoincrement="0">
+<datatype>VARCHAR(10)</datatype>
+<default>NULL</default></row>
 <key type="PRIMARY" name="">
 <part>id</part>
 </key>
 </table>
-<table x="1168" y="298" name="past">
+<table x="444" y="128" name="past">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -125,11 +128,15 @@
 <datatype>INTEGER</datatype>
 <default>NULL</default><relation table="dogs" row="id" />
 </row>
+<row name="id_users" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><relation table="users" row="id" />
+</row>
 <key type="PRIMARY" name="">
 <part>id</part>
 </key>
 </table>
-<table x="1167" y="42" name="present">
+<table x="675" y="147" name="present">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -158,11 +165,15 @@
 <datatype>INTEGER</datatype>
 <default>NULL</default><relation table="dogs" row="id" />
 </row>
+<row name="id_users" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><relation table="users" row="id" />
+</row>
 <key type="PRIMARY" name="">
 <part>id</part>
 </key>
 </table>
-<table x="871" y="563" name="future">
+<table x="877" y="490" name="future">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -195,7 +206,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="878" y="827" name="null">
+<table x="883" y="766" name="null">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -210,7 +221,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="868" y="220" name="dogs">
+<table x="432" y="425" name="dogs">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
