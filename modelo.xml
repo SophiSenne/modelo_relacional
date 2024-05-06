@@ -99,7 +99,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="444" y="128" name="past">
+<table x="411" y="45" name="past">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
