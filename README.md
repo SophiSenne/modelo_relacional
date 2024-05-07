@@ -9,7 +9,7 @@
 - #### Descrição: 
 &nbsp;&nbsp;&nbsp;&nbsp;O projeto consiste no desenvolvimento de uma aplicação web dedicada à coleta de informações sobre o comportamento dos tutores em relação à adoção, compra e eventual abandono de cães. Por meio de um formulário de fácil acesso, os tutores poderão fornecer dados relevantes, enquanto a aplicação os armazena e organiza em uma base de dados estruturada. Dessa forma, essas informações serão essenciais para compreender as razões por trás do abandono de animais a partir de uma análise detalhada das condições dos tutores envolvidos. 
 - #### Ferramenta: 
-&nbsp;&nbsp;&nbsp;&nbsp;A ferramenta utilizada foi o [draw.io](https://app.diagrams.net/).
+&nbsp;&nbsp;&nbsp;&nbsp;A ferramenta utilizada foi o [WWW SQL Designer](https://github.com/ondras/wwwsqldesigner).
 - ### :
 <div align="center">
 <sub>Quadro 01 - Entidades</sub>
