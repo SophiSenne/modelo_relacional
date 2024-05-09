@@ -1,31 +1,54 @@
+## Documentação Simplificada do Modelo Relacional
+
+**Projeto:** Abandono Zero
+
+**Data:** 2024-05-08
+
+**Autor:** AlunoX
+
+**Objetivo:** Descrever o modelo relacional do projeto de forma resumida e simplificada.
+
+## Entidades
+
+- **Usuários** (`users`): Armazena informações básicas sobre os usuários (nome, email, etc.).
+- **Formulários**
+  - **Geral** (`general_forms`): Detalhes gerais do usuário (renda, moradia, etc.).
+  - **Possuir Cão** (`have_forms`): Informações sobre o cão que o usuário possui (raça, idade, etc.).
+  - **Já Teve Cão** (`had_forms`): Informações sobre o cão que o usuário já teve (nome, personalidade, etc.).
+  - **Deseja Cão** (`want_forms`): Informações sobre o cão que o usuário deseja ter (tamanho, pelagem, etc.).
+  - **Sem Cão** (`null_forms`): Motivo pelo qual o usuário não tem e não deseja ter um cão.
+- **Contato** (`user_forms`): Dados para contato futuro com o usuário (nome completo, celular, email).
+- **Cão (Possuir)** (`dog_forms_have`): Informações extras sobre o cão que o usuário possui (nome, gênero, castrado, etc.).
+- **Cão (Desejar)** (`dog_forms_want`): Informações extras sobre o cão que o usuário deseja ter (tamanho, pelagem, cor, etc.).
+
+## Relacionamentos
+
+- Um usuário pode ter um único formulário geral (1:1).
+- Um usuário pode ter vários formulários de cães (N:M).
+- Um formulário de "possuir cão" pode ter um único registro de "cão (possuir)".
+- Um formulário de "desejar cão" pode ter um único registro de "cão (desejar)".
+
+## Regras de Negócio
+
+- Todos os campos obrigatórios devem ser preenchidos.
+- As informações devem ser consistentes entre os formulários.
+- Os usuários não podem editar informações já salvas, exceto em casos específicos.
+- As informações dos usuários são confidenciais.
+
+## Diagrama
+
 <div align="center">
-<sub>Figura 1 - Modelo Relacional</sub>
-<img src="arquiteturaUm.drawio.png" width="100%">
+<sub>Figura 1 - Diagrama simplificado do modelo relacional</sub>
+<img src="../" width="100%">
 <sup>Fonte: Material produzido pela autora (2024)</sup>
 </div>
 
-# Abadono Zero
+## Considerações Finais
 
-- #### Descrição: 
-&nbsp;&nbsp;&nbsp;&nbsp;O projeto consiste no desenvolvimento de uma aplicação web dedicada à coleta de informações sobre o comportamento dos tutores em relação à adoção, compra e eventual abandono de cães. Por meio de um formulário de fácil acesso, os tutores poderão fornecer dados relevantes, enquanto a aplicação os armazena e organiza em uma base de dados estruturada. Dessa forma, essas informações serão essenciais para compreender as razões por trás do abandono de animais a partir de uma análise detalhada das condições dos tutores envolvidos. 
-- #### Ferramenta: 
-&nbsp;&nbsp;&nbsp;&nbsp;A ferramenta utilizada foi o [WWW SQL Designer](https://github.com/ondras/wwwsqldesigner).
-- ### :
-<div align="center">
-<sub>Quadro 01 - Entidades</sub>
-</div>
-<div align="center">
+Este modelo relacional simplificado fornece uma base para o gerenciamento eficiente das informações dos usuários e suas respostas nos formulários do projeto Abandono Zero. As entidades, seus atributos e relacionamentos garantem a organização e a integridade dos dados. As regras de negócio garantem a consistência e a confiabilidade das informações.
 
-| Entidade | Descrição | Atributos |
-| ------- | -------- | ------------|
-| Usuários   | Armazena os dados essenciais para a realização do cadastro e a chave para o próximo formulário.    | ID, data de cadastramento, email, senha, data de nascimento, foreign key formulário |
-| Formulário 0   | Armazena os dados do formulário inicial com os dados do usuário e a chave para qual será o formulário que ele irá responder em seguida.    | ID, nome, nome social, celular, país, estado/região, cidade, bairro, escolaridade, constituição familiar, faixa de renda familiar, tipo de moradia, número de moradores da casa, foreign key formulários|
-| Formulário 1 (presente)  | Armazena os dados correspondentes às perguntas feitas a quem possui cachorro.    | ID, Pergunta 1, Pergunta 2, ...|
-| Formulário 2 (passado)   | Armazena os dados correspondentes às perguntas feitas a quem já teve algum cachorro.    | ID, Pergunta 1, Pergunta 2, ...|
-| Formulário 3 (futuro) | Armazena os dados correspondentes às perguntas feitas a quem quer ter cachorro.    | ID, Pergunta 1, Pergunta 2, ...|
-| Formulário 4 (null)  | Armazena os dados correspondentes às perguntas feitas a quem não tem e não quer ter cachorro.    | ID, Pergunta 1, Pergunta 2, ...|
+**Observações:**
 
-- #### Infraestrutura:
-&nbsp;&nbsp;&nbsp;&nbsp;Os dados da aplicação serão armazenados em um Banco de Dados PostgreSQL, o qual será conectado à camada Model da arquitetura MVC, ao disponibilizar a essa camada os dados estruturados nela. Para que o usuário acesse a camada View, ele utilizará um browser, o que facilita o acesso, por ser uma ferramenta comumente disponível e por não precisar realizar a instalação de aplicações extras.
-
-
+- Este modelo é uma versão simplificada e pode ser adaptado às necessidades específicas do projeto.
+- É importante documentar detalhadamente o modelo relacional para facilitar o entendimento e a manutenção do sistema.
+- A implementação do modelo relacional deve seguir boas práticas de desenvolvimento de banco de dados.
