@@ -2,9 +2,9 @@
 
 **Projeto:** Abandono Zero
 
-**Data:** 2024-05-08
+**Data:** 2024-05-12
 
-**Autor:** AlunoX
+**Autor:** Sophia Emanuele de Senne Silva
 
 **Objetivo:** Descrever o modelo relacional do projeto de forma resumida e simplificada.
 
