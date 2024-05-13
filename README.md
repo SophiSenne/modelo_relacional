@@ -22,6 +22,7 @@
 
 - Um usuário pode ter vários formulários de cães (N:M).
 - Um formulário de "Cão" pode ter um único registro de "Possuir cão" ou um de "Já teve cão".
+- Todas as tabelas se relacionam com "users" a fim de facilitar as consultas.
 
 ## Regras de Negócio
 
